@@ -1,0 +1,26 @@
+name: Lint Code
+
+# Триггеры: запускается при push и pull_request для всех веток
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  lint:
+    name: Run Super Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Клонировать репозиторий
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Запуск Super Linter
+      - name: Lint JavaScript files
+        uses: github/super-linter@v5
+        env:
+          VALIDATE_JAVASCRIPT: true

@@ -1,1 +1,2 @@
-const n = 0;
+const n = () => 0;
+n();
