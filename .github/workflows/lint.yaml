@@ -24,4 +24,5 @@ jobs:
       - name: Lint JavaScript files
         uses: github/super-linter@v5
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_JAVASCRIPT: true
