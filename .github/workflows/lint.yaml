@@ -1,3 +1,4 @@
+---
 name: Lint Code
 
 # Триггеры: запускается при push и pull_request для всех веток
