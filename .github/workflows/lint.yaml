@@ -19,10 +19,11 @@ jobs:
       # 1. Клонировать репозиторий
       - name: Checkout code
         uses: actions/checkout@v3
-
-      # 2. Запуск Super Linter
+      - name: Install modules
+        run: npm install
+      # 2. Запуск eslint
       - name: Lint JavaScript files
-        uses: github/super-linter@v5
+        run: npx eslint .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_JAVASCRIPT: true
