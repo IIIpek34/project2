@@ -1,5 +1,4 @@
----
-name: Lint Code
+name: Lint and test code
 
 # Триггеры: запускается при push и pull_request для всех веток
 on:
@@ -12,18 +11,28 @@ on:
 
 jobs:
   lint:
-    name: Run ESlint
+    name: Run lint
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Клонировать репозиторий
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Install modules
         run: npm install
-      # 2. Запуск eslint
+
       - name: Lint JavaScript files
         run: npx eslint .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_JAVASCRIPT: true
+  test:
+    name: Run test
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npx jest
