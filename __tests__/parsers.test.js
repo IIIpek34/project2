@@ -7,7 +7,7 @@ import parser from '../src/parsers';
 const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filename);
 const readFixture = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-describe('alo', () => {
+describe('parsers', () => {
   test('parser json', () => {
     const jsonData = readFixture('data.json');
     const expected = JSON.parse(jsonData);
