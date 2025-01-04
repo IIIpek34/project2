@@ -4,7 +4,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 import parser from '../src/parsers';
 
-const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filename);
+const getFixturePath = (filename) => path.join(__dirname, '../__fixtures__', filename);
 const readFixture = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 describe('parsers', () => {
