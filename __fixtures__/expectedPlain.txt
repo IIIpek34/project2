@@ -1,3 +1,0 @@
-Property 'age' was updated. From '30' to '32'
-Property 'isEmployed' was updated. From 'true' to 'false'
-Property 'city' was added with value: 'Wonderland'
