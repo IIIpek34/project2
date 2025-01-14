@@ -1,5 +1,5 @@
-import parsers from './parsers';
-import formatters from './formatters';
+import parsers from './parsers.js';
+import formatters from './formatters.js';
 
 const compare = (file1, file2, format = 'stylish') => {
   const data1 = parsers.parse(file1);

@@ -1,6 +1,6 @@
 import { describe, test, expect } from '@jest/globals';
-import { diff, stylishOutput, plainOutput } from '../__fixtures__/formattersData';
-import formatters from '../src/formatters';
+import { diff, stylishOutput, plainOutput } from '../__fixtures__/formattersData.js';
+import formatters from '../src/formatters.js';
 
 describe('formatters', () => {
   test('formatStylish', () => {

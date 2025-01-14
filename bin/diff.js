@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import { readFileSync } from 'fs';
 import path from 'path';
-import compare from '../src/compare';
+import compare from '../src/compare.js';
 
 const program = new Command();
 
