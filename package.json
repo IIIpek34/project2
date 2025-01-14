@@ -4,7 +4,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest",
+    "install": "npm ci",
+    "help": "node bin/diff.js -h"
   },
   "keywords": [],
   "author": "",
