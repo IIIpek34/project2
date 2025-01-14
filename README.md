@@ -1,20 +1,14 @@
-# Description
-
+# Gendiff (Generate Difference)
+## Description
 Gendiff - utility to calculate differences between two data structures. Supports .json and .yaml formats.
 
----
-
 ## Installation
-
-
 Installation inside the directory with the code:
 ```
 make install
 make publish
 make link
 ```
-
----
 
 ## Usage
 ```
@@ -30,8 +24,6 @@ Options:
   -f, --format <type>  Output format (default: "stylish")
   -h, --help           display help for command
 ```
-
----
 
 ## Run locally
 
