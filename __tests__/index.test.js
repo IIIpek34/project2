@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import compare from '../src/index';
+import compare from '../src/index.js';
 
 describe('index.js exports', () => {
   test('should export the compare function', () => {

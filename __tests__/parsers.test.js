@@ -2,7 +2,7 @@ import { describe, test, expect } from '@jest/globals';
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
-import parser from '../src/parsers';
+import parser from '../src/parsers.js';
 
 const getFixturePath = (filename) => path.join(__dirname, '../__fixtures__', filename);
 const readFixture = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');

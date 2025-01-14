@@ -1,8 +1,8 @@
 import { describe, test, expect } from '@jest/globals';
 import fs from 'fs';
 import path from 'path';
-import compare from '../src/compare';
-import { stylishOutput, plainOutput } from '../__fixtures__/compareData';
+import compare from '../src/compare.js';
+import { stylishOutput, plainOutput } from '../__fixtures__/compareData.js';
 
 const getFixturePath = (filename) => path.join(__dirname, '../__fixtures__', filename);
 const readFixture = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');

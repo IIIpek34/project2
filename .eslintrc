@@ -5,6 +5,13 @@
     },
     "rules": {
         "no-underscore-dangle": [2, { "allow": ["__filename", "__dirname"] }],
-        "linebreak-style": 0
+        "linebreak-style": 0,
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "always"
+            }
+        ]
     }
 }
